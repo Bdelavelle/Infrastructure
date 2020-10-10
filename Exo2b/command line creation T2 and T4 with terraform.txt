@@ -1,0 +1,1252 @@
+Microsoft Windows [Version 10.0.19041.388]
+(c) 2020 Microsoft Corporation. All rights reserved.
+
+C:\Users\Utilisateur>cd Documents
+
+C:\Users\Utilisateur\Documents>cd Udacity
+
+C:\Users\Utilisateur\Documents\Udacity>cd AWS
+
+C:\Users\Utilisateur\Documents\Udacity\AWS>cd Exo2
+
+C:\Users\Utilisateur\Documents\Udacity\AWS\Exo2>cd M4
+
+C:\Users\Utilisateur\Documents\Udacity\AWS\Exo2\M4>cd ..
+
+C:\Users\Utilisateur\Documents\Udacity\AWS\Exo2>.terraform init
+'.terraform' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Utilisateur\Documents\Udacity\AWS\Exo2>terraform init
+
+Initializing the backend...
+
+Initializing provider plugins...
+- Using previously-installed hashicorp/aws v3.8.0
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, we recommend adding version constraints in a required_providers block
+in your configuration, with the constraint strings suggested below.
+
+* hashicorp/aws: version = "~> 3.8.0"
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+
+C:\Users\Utilisateur\Documents\Udacity\AWS\Exo2>terraform plan
+provider.aws.region
+  The region where AWS operations will take place. Examples
+  are us-east-1, us-west-2, etc.
+
+  Enter a value: us-east-1
+
+Refreshing Terraform state in-memory prior to plan...
+The refreshed state will be used to calculate this plan, but will not be
+persisted to local or remote state storage.
+
+
+------------------------------------------------------------------------
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_instance.M4_server[0] will be created
+  + resource "aws_instance" "M4_server" {
+      + ami                          = "ami-0947d2ba12ee1ff75"
+      + arn                          = (known after apply)
+      + associate_public_ip_address  = (known after apply)
+      + availability_zone            = (known after apply)
+      + cpu_core_count               = (known after apply)
+      + cpu_threads_per_core         = (known after apply)
+      + get_password_data            = false
+      + host_id                      = (known after apply)
+      + id                           = (known after apply)
+      + instance_state               = (known after apply)
+      + instance_type                = "m4.large"
+      + ipv6_address_count           = (known after apply)
+      + ipv6_addresses               = (known after apply)
+      + key_name                     = (known after apply)
+      + outpost_arn                  = (known after apply)
+      + password_data                = (known after apply)
+      + placement_group              = (known after apply)
+      + primary_network_interface_id = (known after apply)
+      + private_dns                  = (known after apply)
+      + private_ip                   = (known after apply)
+      + public_dns                   = (known after apply)
+      + public_ip                    = (known after apply)
+      + secondary_private_ips        = (known after apply)
+      + security_groups              = (known after apply)
+      + source_dest_check            = true
+      + subnet_id                    = "subnet-02dbf0a9c8720a2d0"
+      + tags                         = {
+          + "Environment" = "Production"
+          + "Name"        = "Udacity_M4"
+        }
+      + tenancy                      = (known after apply)
+      + volume_tags                  = (known after apply)
+      + vpc_security_group_ids       = [
+          + "sg-076f5169f94185ee3",
+        ]
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = (known after apply)
+          + http_put_response_hop_limit = (known after apply)
+          + http_tokens                 = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+    }
+
+  # aws_instance.M4_server[1] will be created
+  + resource "aws_instance" "M4_server" {
+      + ami                          = "ami-0947d2ba12ee1ff75"
+      + arn                          = (known after apply)
+      + associate_public_ip_address  = (known after apply)
+      + availability_zone            = (known after apply)
+      + cpu_core_count               = (known after apply)
+      + cpu_threads_per_core         = (known after apply)
+      + get_password_data            = false
+      + host_id                      = (known after apply)
+      + id                           = (known after apply)
+      + instance_state               = (known after apply)
+      + instance_type                = "m4.large"
+      + ipv6_address_count           = (known after apply)
+      + ipv6_addresses               = (known after apply)
+      + key_name                     = (known after apply)
+      + outpost_arn                  = (known after apply)
+      + password_data                = (known after apply)
+      + placement_group              = (known after apply)
+      + primary_network_interface_id = (known after apply)
+      + private_dns                  = (known after apply)
+      + private_ip                   = (known after apply)
+      + public_dns                   = (known after apply)
+      + public_ip                    = (known after apply)
+      + secondary_private_ips        = (known after apply)
+      + security_groups              = (known after apply)
+      + source_dest_check            = true
+      + subnet_id                    = "subnet-02dbf0a9c8720a2d0"
+      + tags                         = {
+          + "Environment" = "Production"
+          + "Name"        = "Udacity_M4"
+        }
+      + tenancy                      = (known after apply)
+      + volume_tags                  = (known after apply)
+      + vpc_security_group_ids       = [
+          + "sg-076f5169f94185ee3",
+        ]
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = (known after apply)
+          + http_put_response_hop_limit = (known after apply)
+          + http_tokens                 = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+    }
+
+  # aws_instance.T2_server[0] will be created
+  + resource "aws_instance" "T2_server" {
+      + ami                          = "ami-0947d2ba12ee1ff75"
+      + arn                          = (known after apply)
+      + associate_public_ip_address  = (known after apply)
+      + availability_zone            = (known after apply)
+      + cpu_core_count               = (known after apply)
+      + cpu_threads_per_core         = (known after apply)
+      + get_password_data            = false
+      + host_id                      = (known after apply)
+      + id                           = (known after apply)
+      + instance_state               = (known after apply)
+      + instance_type                = "t2.micro"
+      + ipv6_address_count           = (known after apply)
+      + ipv6_addresses               = (known after apply)
+      + key_name                     = (known after apply)
+      + outpost_arn                  = (known after apply)
+      + password_data                = (known after apply)
+      + placement_group              = (known after apply)
+      + primary_network_interface_id = (known after apply)
+      + private_dns                  = (known after apply)
+      + private_ip                   = (known after apply)
+      + public_dns                   = (known after apply)
+      + public_ip                    = (known after apply)
+      + secondary_private_ips        = (known after apply)
+      + security_groups              = (known after apply)
+      + source_dest_check            = true
+      + subnet_id                    = "subnet-02dbf0a9c8720a2d0"
+      + tags                         = {
+          + "Environment" = "Production"
+          + "Name"        = "Udacity_T2"
+        }
+      + tenancy                      = (known after apply)
+      + volume_tags                  = (known after apply)
+      + vpc_security_group_ids       = [
+          + "sg-076f5169f94185ee3",
+        ]
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = (known after apply)
+          + http_put_response_hop_limit = (known after apply)
+          + http_tokens                 = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+    }
+
+  # aws_instance.T2_server[1] will be created
+  + resource "aws_instance" "T2_server" {
+      + ami                          = "ami-0947d2ba12ee1ff75"
+      + arn                          = (known after apply)
+      + associate_public_ip_address  = (known after apply)
+      + availability_zone            = (known after apply)
+      + cpu_core_count               = (known after apply)
+      + cpu_threads_per_core         = (known after apply)
+      + get_password_data            = false
+      + host_id                      = (known after apply)
+      + id                           = (known after apply)
+      + instance_state               = (known after apply)
+      + instance_type                = "t2.micro"
+      + ipv6_address_count           = (known after apply)
+      + ipv6_addresses               = (known after apply)
+      + key_name                     = (known after apply)
+      + outpost_arn                  = (known after apply)
+      + password_data                = (known after apply)
+      + placement_group              = (known after apply)
+      + primary_network_interface_id = (known after apply)
+      + private_dns                  = (known after apply)
+      + private_ip                   = (known after apply)
+      + public_dns                   = (known after apply)
+      + public_ip                    = (known after apply)
+      + secondary_private_ips        = (known after apply)
+      + security_groups              = (known after apply)
+      + source_dest_check            = true
+      + subnet_id                    = "subnet-02dbf0a9c8720a2d0"
+      + tags                         = {
+          + "Environment" = "Production"
+          + "Name"        = "Udacity_T2"
+        }
+      + tenancy                      = (known after apply)
+      + volume_tags                  = (known after apply)
+      + vpc_security_group_ids       = [
+          + "sg-076f5169f94185ee3",
+        ]
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = (known after apply)
+          + http_put_response_hop_limit = (known after apply)
+          + http_tokens                 = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+    }
+
+  # aws_instance.T2_server[2] will be created
+  + resource "aws_instance" "T2_server" {
+      + ami                          = "ami-0947d2ba12ee1ff75"
+      + arn                          = (known after apply)
+      + associate_public_ip_address  = (known after apply)
+      + availability_zone            = (known after apply)
+      + cpu_core_count               = (known after apply)
+      + cpu_threads_per_core         = (known after apply)
+      + get_password_data            = false
+      + host_id                      = (known after apply)
+      + id                           = (known after apply)
+      + instance_state               = (known after apply)
+      + instance_type                = "t2.micro"
+      + ipv6_address_count           = (known after apply)
+      + ipv6_addresses               = (known after apply)
+      + key_name                     = (known after apply)
+      + outpost_arn                  = (known after apply)
+      + password_data                = (known after apply)
+      + placement_group              = (known after apply)
+      + primary_network_interface_id = (known after apply)
+      + private_dns                  = (known after apply)
+      + private_ip                   = (known after apply)
+      + public_dns                   = (known after apply)
+      + public_ip                    = (known after apply)
+      + secondary_private_ips        = (known after apply)
+      + security_groups              = (known after apply)
+      + source_dest_check            = true
+      + subnet_id                    = "subnet-02dbf0a9c8720a2d0"
+      + tags                         = {
+          + "Environment" = "Production"
+          + "Name"        = "Udacity_T2"
+        }
+      + tenancy                      = (known after apply)
+      + volume_tags                  = (known after apply)
+      + vpc_security_group_ids       = [
+          + "sg-076f5169f94185ee3",
+        ]
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = (known after apply)
+          + http_put_response_hop_limit = (known after apply)
+          + http_tokens                 = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+    }
+
+  # aws_instance.T2_server[3] will be created
+  + resource "aws_instance" "T2_server" {
+      + ami                          = "ami-0947d2ba12ee1ff75"
+      + arn                          = (known after apply)
+      + associate_public_ip_address  = (known after apply)
+      + availability_zone            = (known after apply)
+      + cpu_core_count               = (known after apply)
+      + cpu_threads_per_core         = (known after apply)
+      + get_password_data            = false
+      + host_id                      = (known after apply)
+      + id                           = (known after apply)
+      + instance_state               = (known after apply)
+      + instance_type                = "t2.micro"
+      + ipv6_address_count           = (known after apply)
+      + ipv6_addresses               = (known after apply)
+      + key_name                     = (known after apply)
+      + outpost_arn                  = (known after apply)
+      + password_data                = (known after apply)
+      + placement_group              = (known after apply)
+      + primary_network_interface_id = (known after apply)
+      + private_dns                  = (known after apply)
+      + private_ip                   = (known after apply)
+      + public_dns                   = (known after apply)
+      + public_ip                    = (known after apply)
+      + secondary_private_ips        = (known after apply)
+      + security_groups              = (known after apply)
+      + source_dest_check            = true
+      + subnet_id                    = "subnet-02dbf0a9c8720a2d0"
+      + tags                         = {
+          + "Environment" = "Production"
+          + "Name"        = "Udacity_T2"
+        }
+      + tenancy                      = (known after apply)
+      + volume_tags                  = (known after apply)
+      + vpc_security_group_ids       = [
+          + "sg-076f5169f94185ee3",
+        ]
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = (known after apply)
+          + http_put_response_hop_limit = (known after apply)
+          + http_tokens                 = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+    }
+
+Plan: 6 to add, 0 to change, 0 to destroy.
+
+------------------------------------------------------------------------
+
+Note: You didn't specify an "-out" parameter to save this plan, so Terraform
+can't guarantee that exactly these actions will be performed if
+"terraform apply" is subsequently run.
+
+
+C:\Users\Utilisateur\Documents\Udacity\AWS\Exo2>terraform apply
+provider.aws.region
+  The region where AWS operations will take place. Examples
+  are us-east-1, us-west-2, etc.
+
+  Enter a value: us-east-1
+
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_instance.M4_server[0] will be created
+  + resource "aws_instance" "M4_server" {
+      + ami                          = "ami-0947d2ba12ee1ff75"
+      + arn                          = (known after apply)
+      + associate_public_ip_address  = (known after apply)
+      + availability_zone            = (known after apply)
+      + cpu_core_count               = (known after apply)
+      + cpu_threads_per_core         = (known after apply)
+      + get_password_data            = false
+      + host_id                      = (known after apply)
+      + id                           = (known after apply)
+      + instance_state               = (known after apply)
+      + instance_type                = "m4.large"
+      + ipv6_address_count           = (known after apply)
+      + ipv6_addresses               = (known after apply)
+      + key_name                     = (known after apply)
+      + outpost_arn                  = (known after apply)
+      + password_data                = (known after apply)
+      + placement_group              = (known after apply)
+      + primary_network_interface_id = (known after apply)
+      + private_dns                  = (known after apply)
+      + private_ip                   = (known after apply)
+      + public_dns                   = (known after apply)
+      + public_ip                    = (known after apply)
+      + secondary_private_ips        = (known after apply)
+      + security_groups              = (known after apply)
+      + source_dest_check            = true
+      + subnet_id                    = "subnet-02dbf0a9c8720a2d0"
+      + tags                         = {
+          + "Environment" = "Production"
+          + "Name"        = "Udacity_M4"
+        }
+      + tenancy                      = (known after apply)
+      + volume_tags                  = (known after apply)
+      + vpc_security_group_ids       = [
+          + "sg-076f5169f94185ee3",
+        ]
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = (known after apply)
+          + http_put_response_hop_limit = (known after apply)
+          + http_tokens                 = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+    }
+
+  # aws_instance.M4_server[1] will be created
+  + resource "aws_instance" "M4_server" {
+      + ami                          = "ami-0947d2ba12ee1ff75"
+      + arn                          = (known after apply)
+      + associate_public_ip_address  = (known after apply)
+      + availability_zone            = (known after apply)
+      + cpu_core_count               = (known after apply)
+      + cpu_threads_per_core         = (known after apply)
+      + get_password_data            = false
+      + host_id                      = (known after apply)
+      + id                           = (known after apply)
+      + instance_state               = (known after apply)
+      + instance_type                = "m4.large"
+      + ipv6_address_count           = (known after apply)
+      + ipv6_addresses               = (known after apply)
+      + key_name                     = (known after apply)
+      + outpost_arn                  = (known after apply)
+      + password_data                = (known after apply)
+      + placement_group              = (known after apply)
+      + primary_network_interface_id = (known after apply)
+      + private_dns                  = (known after apply)
+      + private_ip                   = (known after apply)
+      + public_dns                   = (known after apply)
+      + public_ip                    = (known after apply)
+      + secondary_private_ips        = (known after apply)
+      + security_groups              = (known after apply)
+      + source_dest_check            = true
+      + subnet_id                    = "subnet-02dbf0a9c8720a2d0"
+      + tags                         = {
+          + "Environment" = "Production"
+          + "Name"        = "Udacity_M4"
+        }
+      + tenancy                      = (known after apply)
+      + volume_tags                  = (known after apply)
+      + vpc_security_group_ids       = [
+          + "sg-076f5169f94185ee3",
+        ]
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = (known after apply)
+          + http_put_response_hop_limit = (known after apply)
+          + http_tokens                 = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+    }
+
+  # aws_instance.T2_server[0] will be created
+  + resource "aws_instance" "T2_server" {
+      + ami                          = "ami-0947d2ba12ee1ff75"
+      + arn                          = (known after apply)
+      + associate_public_ip_address  = (known after apply)
+      + availability_zone            = (known after apply)
+      + cpu_core_count               = (known after apply)
+      + cpu_threads_per_core         = (known after apply)
+      + get_password_data            = false
+      + host_id                      = (known after apply)
+      + id                           = (known after apply)
+      + instance_state               = (known after apply)
+      + instance_type                = "t2.micro"
+      + ipv6_address_count           = (known after apply)
+      + ipv6_addresses               = (known after apply)
+      + key_name                     = (known after apply)
+      + outpost_arn                  = (known after apply)
+      + password_data                = (known after apply)
+      + placement_group              = (known after apply)
+      + primary_network_interface_id = (known after apply)
+      + private_dns                  = (known after apply)
+      + private_ip                   = (known after apply)
+      + public_dns                   = (known after apply)
+      + public_ip                    = (known after apply)
+      + secondary_private_ips        = (known after apply)
+      + security_groups              = (known after apply)
+      + source_dest_check            = true
+      + subnet_id                    = "subnet-02dbf0a9c8720a2d0"
+      + tags                         = {
+          + "Environment" = "Production"
+          + "Name"        = "Udacity_T2"
+        }
+      + tenancy                      = (known after apply)
+      + volume_tags                  = (known after apply)
+      + vpc_security_group_ids       = [
+          + "sg-076f5169f94185ee3",
+        ]
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = (known after apply)
+          + http_put_response_hop_limit = (known after apply)
+          + http_tokens                 = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+    }
+
+  # aws_instance.T2_server[1] will be created
+  + resource "aws_instance" "T2_server" {
+      + ami                          = "ami-0947d2ba12ee1ff75"
+      + arn                          = (known after apply)
+      + associate_public_ip_address  = (known after apply)
+      + availability_zone            = (known after apply)
+      + cpu_core_count               = (known after apply)
+      + cpu_threads_per_core         = (known after apply)
+      + get_password_data            = false
+      + host_id                      = (known after apply)
+      + id                           = (known after apply)
+      + instance_state               = (known after apply)
+      + instance_type                = "t2.micro"
+      + ipv6_address_count           = (known after apply)
+      + ipv6_addresses               = (known after apply)
+      + key_name                     = (known after apply)
+      + outpost_arn                  = (known after apply)
+      + password_data                = (known after apply)
+      + placement_group              = (known after apply)
+      + primary_network_interface_id = (known after apply)
+      + private_dns                  = (known after apply)
+      + private_ip                   = (known after apply)
+      + public_dns                   = (known after apply)
+      + public_ip                    = (known after apply)
+      + secondary_private_ips        = (known after apply)
+      + security_groups              = (known after apply)
+      + source_dest_check            = true
+      + subnet_id                    = "subnet-02dbf0a9c8720a2d0"
+      + tags                         = {
+          + "Environment" = "Production"
+          + "Name"        = "Udacity_T2"
+        }
+      + tenancy                      = (known after apply)
+      + volume_tags                  = (known after apply)
+      + vpc_security_group_ids       = [
+          + "sg-076f5169f94185ee3",
+        ]
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = (known after apply)
+          + http_put_response_hop_limit = (known after apply)
+          + http_tokens                 = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+    }
+
+  # aws_instance.T2_server[2] will be created
+  + resource "aws_instance" "T2_server" {
+      + ami                          = "ami-0947d2ba12ee1ff75"
+      + arn                          = (known after apply)
+      + associate_public_ip_address  = (known after apply)
+      + availability_zone            = (known after apply)
+      + cpu_core_count               = (known after apply)
+      + cpu_threads_per_core         = (known after apply)
+      + get_password_data            = false
+      + host_id                      = (known after apply)
+      + id                           = (known after apply)
+      + instance_state               = (known after apply)
+      + instance_type                = "t2.micro"
+      + ipv6_address_count           = (known after apply)
+      + ipv6_addresses               = (known after apply)
+      + key_name                     = (known after apply)
+      + outpost_arn                  = (known after apply)
+      + password_data                = (known after apply)
+      + placement_group              = (known after apply)
+      + primary_network_interface_id = (known after apply)
+      + private_dns                  = (known after apply)
+      + private_ip                   = (known after apply)
+      + public_dns                   = (known after apply)
+      + public_ip                    = (known after apply)
+      + secondary_private_ips        = (known after apply)
+      + security_groups              = (known after apply)
+      + source_dest_check            = true
+      + subnet_id                    = "subnet-02dbf0a9c8720a2d0"
+      + tags                         = {
+          + "Environment" = "Production"
+          + "Name"        = "Udacity_T2"
+        }
+      + tenancy                      = (known after apply)
+      + volume_tags                  = (known after apply)
+      + vpc_security_group_ids       = [
+          + "sg-076f5169f94185ee3",
+        ]
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = (known after apply)
+          + http_put_response_hop_limit = (known after apply)
+          + http_tokens                 = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+    }
+
+  # aws_instance.T2_server[3] will be created
+  + resource "aws_instance" "T2_server" {
+      + ami                          = "ami-0947d2ba12ee1ff75"
+      + arn                          = (known after apply)
+      + associate_public_ip_address  = (known after apply)
+      + availability_zone            = (known after apply)
+      + cpu_core_count               = (known after apply)
+      + cpu_threads_per_core         = (known after apply)
+      + get_password_data            = false
+      + host_id                      = (known after apply)
+      + id                           = (known after apply)
+      + instance_state               = (known after apply)
+      + instance_type                = "t2.micro"
+      + ipv6_address_count           = (known after apply)
+      + ipv6_addresses               = (known after apply)
+      + key_name                     = (known after apply)
+      + outpost_arn                  = (known after apply)
+      + password_data                = (known after apply)
+      + placement_group              = (known after apply)
+      + primary_network_interface_id = (known after apply)
+      + private_dns                  = (known after apply)
+      + private_ip                   = (known after apply)
+      + public_dns                   = (known after apply)
+      + public_ip                    = (known after apply)
+      + secondary_private_ips        = (known after apply)
+      + security_groups              = (known after apply)
+      + source_dest_check            = true
+      + subnet_id                    = "subnet-02dbf0a9c8720a2d0"
+      + tags                         = {
+          + "Environment" = "Production"
+          + "Name"        = "Udacity_T2"
+        }
+      + tenancy                      = (known after apply)
+      + volume_tags                  = (known after apply)
+      + vpc_security_group_ids       = [
+          + "sg-076f5169f94185ee3",
+        ]
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = (known after apply)
+          + http_put_response_hop_limit = (known after apply)
+          + http_tokens                 = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+    }
+
+Plan: 6 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+aws_instance.T2_server[0]: Creating...
+aws_instance.T2_server[3]: Creating...
+aws_instance.M4_server[1]: Creating...
+aws_instance.T2_server[1]: Creating...
+aws_instance.M4_server[0]: Creating...
+aws_instance.T2_server[2]: Creating...
+aws_instance.T2_server[0]: Still creating... [10s elapsed]
+aws_instance.M4_server[1]: Still creating... [10s elapsed]
+aws_instance.M4_server[0]: Still creating... [10s elapsed]
+aws_instance.T2_server[1]: Still creating... [10s elapsed]
+aws_instance.T2_server[3]: Still creating... [10s elapsed]
+aws_instance.T2_server[2]: Still creating... [10s elapsed]
+aws_instance.M4_server[1]: Still creating... [20s elapsed]
+aws_instance.M4_server[0]: Still creating... [20s elapsed]
+aws_instance.T2_server[1]: Still creating... [20s elapsed]
+aws_instance.T2_server[0]: Still creating... [20s elapsed]
+aws_instance.T2_server[3]: Still creating... [20s elapsed]
+aws_instance.T2_server[2]: Still creating... [20s elapsed]
+aws_instance.M4_server[1]: Creation complete after 25s [id=i-0ad49f54da776b266]
+aws_instance.M4_server[0]: Creation complete after 26s [id=i-013a4eeb9d194972f]
+aws_instance.T2_server[0]: Creation complete after 26s [id=i-059bf828bf66e28ee]
+aws_instance.T2_server[1]: Still creating... [30s elapsed]
+aws_instance.T2_server[3]: Still creating... [30s elapsed]
+aws_instance.T2_server[2]: Still creating... [30s elapsed]
+aws_instance.T2_server[2]: Creation complete after 37s [id=i-098425688f59f205d]
+aws_instance.T2_server[3]: Creation complete after 37s [id=i-0ec84700054f65534]
+aws_instance.T2_server[1]: Creation complete after 37s [id=i-01c6a95c08b929074]
+
+Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
+
+C:\Users\Utilisateur\Documents\Udacity\AWS\Exo2>terraform destroy -target=aws_instance.M4_server
+provider.aws.region
+  The region where AWS operations will take place. Examples
+  are us-east-1, us-west-2, etc.
+
+  Enter a value: us-east-1
+
+aws_instance.M4_server[1]: Refreshing state... [id=i-0ad49f54da776b266]
+aws_instance.M4_server[0]: Refreshing state... [id=i-013a4eeb9d194972f]
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_instance.M4_server[0] will be destroyed
+  - resource "aws_instance" "M4_server" {
+      - ami                          = "ami-0947d2ba12ee1ff75" -> null
+      - arn                          = "arn:aws:ec2:us-east-1:828697518480:instance/i-013a4eeb9d194972f" -> null
+      - associate_public_ip_address  = false -> null
+      - availability_zone            = "us-east-1a" -> null
+      - cpu_core_count               = 1 -> null
+      - cpu_threads_per_core         = 2 -> null
+      - disable_api_termination      = false -> null
+      - ebs_optimized                = false -> null
+      - get_password_data            = false -> null
+      - hibernation                  = false -> null
+      - id                           = "i-013a4eeb9d194972f" -> null
+      - instance_state               = "running" -> null
+      - instance_type                = "m4.large" -> null
+      - ipv6_address_count           = 0 -> null
+      - ipv6_addresses               = [] -> null
+      - monitoring                   = false -> null
+      - primary_network_interface_id = "eni-071e750fcad7511d0" -> null
+      - private_dns                  = "ip-10-0-0-33.ec2.internal" -> null
+      - private_ip                   = "10.0.0.33" -> null
+      - secondary_private_ips        = [] -> null
+      - security_groups              = [] -> null
+      - source_dest_check            = true -> null
+      - subnet_id                    = "subnet-02dbf0a9c8720a2d0" -> null
+      - tags                         = {
+          - "Environment" = "Production"
+          - "Name"        = "Udacity_M4"
+        } -> null
+      - tenancy                      = "default" -> null
+      - volume_tags                  = {} -> null
+      - vpc_security_group_ids       = [
+          - "sg-076f5169f94185ee3",
+        ] -> null
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_put_response_hop_limit = 1 -> null
+          - http_tokens                 = "optional" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/xvda" -> null
+          - encrypted             = false -> null
+          - iops                  = 100 -> null
+          - volume_id             = "vol-01dee974690a0691e" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp2" -> null
+        }
+    }
+
+  # aws_instance.M4_server[1] will be destroyed
+  - resource "aws_instance" "M4_server" {
+      - ami                          = "ami-0947d2ba12ee1ff75" -> null
+      - arn                          = "arn:aws:ec2:us-east-1:828697518480:instance/i-0ad49f54da776b266" -> null
+      - associate_public_ip_address  = false -> null
+      - availability_zone            = "us-east-1a" -> null
+      - cpu_core_count               = 1 -> null
+      - cpu_threads_per_core         = 2 -> null
+      - disable_api_termination      = false -> null
+      - ebs_optimized                = false -> null
+      - get_password_data            = false -> null
+      - hibernation                  = false -> null
+      - id                           = "i-0ad49f54da776b266" -> null
+      - instance_state               = "running" -> null
+      - instance_type                = "m4.large" -> null
+      - ipv6_address_count           = 0 -> null
+      - ipv6_addresses               = [] -> null
+      - monitoring                   = false -> null
+      - primary_network_interface_id = "eni-0eefc8e4c3374ee32" -> null
+      - private_dns                  = "ip-10-0-0-32.ec2.internal" -> null
+      - private_ip                   = "10.0.0.32" -> null
+      - secondary_private_ips        = [] -> null
+      - security_groups              = [] -> null
+      - source_dest_check            = true -> null
+      - subnet_id                    = "subnet-02dbf0a9c8720a2d0" -> null
+      - tags                         = {
+          - "Environment" = "Production"
+          - "Name"        = "Udacity_M4"
+        } -> null
+      - tenancy                      = "default" -> null
+      - volume_tags                  = {} -> null
+      - vpc_security_group_ids       = [
+          - "sg-076f5169f94185ee3",
+        ] -> null
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_put_response_hop_limit = 1 -> null
+          - http_tokens                 = "optional" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/xvda" -> null
+          - encrypted             = false -> null
+          - iops                  = 100 -> null
+          - volume_id             = "vol-0851fbd425e4fa4a6" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp2" -> null
+        }
+    }
+
+Plan: 0 to add, 0 to change, 2 to destroy.
+
+
+Warning: Resource targeting is in effect
+
+You are creating a plan with the -target option, which means that the result
+of this plan may not represent all of the changes requested by the current
+configuration.
+
+The -target option is not for routine use, and is provided only for
+exceptional situations such as recovering from errors or mistakes, or when
+Terraform specifically suggests to use it as part of an error message.
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+aws_instance.M4_server[0]: Destroying... [id=i-013a4eeb9d194972f]
+aws_instance.M4_server[1]: Destroying... [id=i-0ad49f54da776b266]
+aws_instance.M4_server[1]: Still destroying... [id=i-0ad49f54da776b266, 10s elapsed]
+aws_instance.M4_server[0]: Still destroying... [id=i-013a4eeb9d194972f, 10s elapsed]
+aws_instance.M4_server[1]: Still destroying... [id=i-0ad49f54da776b266, 20s elapsed]
+aws_instance.M4_server[0]: Still destroying... [id=i-013a4eeb9d194972f, 20s elapsed]
+aws_instance.M4_server[1]: Still destroying... [id=i-0ad49f54da776b266, 30s elapsed]
+aws_instance.M4_server[0]: Still destroying... [id=i-013a4eeb9d194972f, 30s elapsed]
+aws_instance.M4_server[0]: Destruction complete after 32s
+aws_instance.M4_server[1]: Destruction complete after 32s
+
+Warning: Applied changes may be incomplete
+
+The plan was created with the -target option in effect, so some changes
+requested in the configuration may have been ignored and the output values may
+not be fully updated. Run the following command to verify that no other
+changes are pending:
+    terraform plan
+
+Note that the -target option is not suitable for routine use, and is provided
+only for exceptional situations such as recovering from errors or mistakes, or
+when Terraform specifically suggests to use it as part of an error message.
+
+
+Destroy complete! Resources: 2 destroyed.
+
+C:\Users\Utilisateur\Documents\Udacity\AWS\Exo2>

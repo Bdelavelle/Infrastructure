@@ -1,0 +1,3 @@
+Actions taken to reduce the cost (based on the fact less traffic on the service) :
+   - Reduce size of the DBs and backup (half of storage) => Less traffic so less space required
+   - Reduce size of the load balancing (half of traffic) => Less traffic so less load balancing required
