@@ -1,0 +1,78 @@
+Using username "ec2-user".
+Authenticating with public key "udacitykeypair2" from agent
+Last login: Sun Sep 13 14:12:32 2020 from 213.55.244.43
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-10-2-11-200 ~]$ mysql -h udacityreplica2.cbcu5ijwtvs8.eu-west-3.rds.amazonaws.com -P 3306 -u admin -p
+-bash: mysql: command not found
+[ec2-user@ip-10-2-11-200 ~]$ sudo yum install mysql
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                               | 3.7 kB     00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package mariadb.x86_64 1:5.5.64-1.amzn2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package        Arch          Version                   Repository         Size
+================================================================================
+Installing:
+ mariadb        x86_64        1:5.5.64-1.amzn2          amzn2-core        9.0 M
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 9.0 M
+Installed size: 49 M
+Is this ok [y/d/N]: y
+Downloading packages:
+mariadb-5.5.64-1.amzn2.x86_64.rpm                          | 9.0 MB   00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:mariadb-5.5.64-1.amzn2.x86_64                              1/1
+  Verifying  : 1:mariadb-5.5.64-1.amzn2.x86_64                              1/1
+
+Installed:
+  mariadb.x86_64 1:5.5.64-1.amzn2
+
+Complete!
+[ec2-user@ip-10-2-11-200 ~]$ mysql -h udacityreplica2.cbcu5ijwtvs8.eu-west-3.rds.amazonaws.com -P 3306 -u admin -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 303
+Server version: 8.0.17 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> SHOW TABLES;
+ERROR 1046 (3D000): No database selected
+MySQL [(none)]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| udacity            |
++--------------------+
+4 rows in set (0.01 sec)
+
+MySQL [(none)]> use udacity;
+Database changed
+MySQL [udacity]> SHOW TABLES;
+Empty set (0.01 sec)
+
+MySQL [udacity]> CREATE TABLE userr(firstname VARCHAR(30) PRIMARY KEY,lastname V
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so i
+MySQL [udacity]>

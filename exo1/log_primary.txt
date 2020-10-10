@@ -1,0 +1,55 @@
+Using username "ec2-user".
+Authenticating with public key "imported-openssh-key"
+Last login: Sun Sep 13 12:51:16 2020 from 213.55.244.43
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-10-1-10-148 ~]$ mysql -h udacity.cmmaeelkbq8f.us-east-1.rds.amazona                                                                                        ws.com -P 3306 -u admin -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 270
+Server version: 8.0.17 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> use udacity
+Database changed
+MySQL [udacity]> SHOW TABLES;
+Empty set (0.01 sec)
+
+MySQL [udacity]> CREATE TABLE userr(firstname VARCHAR(30) PRIMARY KEY,lastname VARCHAR(30));
+Query OK, 0 rows affected (0.05 sec)
+
+MySQL [udacity]> SHOW TABLES;
++-------------------+
+| Tables_in_udacity |
++-------------------+
+| userr             |
++-------------------+
+1 row in set (0.01 sec)
+
+MySQL [udacity]> INSERT INTO `userr` (`firstname`,`lastname`) VALUES ('Benjamin','Delavelle');
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [udacity]> select firstname from userr;
++-----------+
+| firstname |
++-----------+
+| Benjamin  |
++-----------+
+1 row in set (0.00 sec)
+
+MySQL [udacity]> DROP userr;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'userr' at line 1
+MySQL [udacity]> DROP TABLE userr;
+Query OK, 0 rows affected (0.03 sec)
+
+MySQL [udacity]> SHOW TABLES;
+Empty set (0.00 sec)
+
+MySQL [udacity]>

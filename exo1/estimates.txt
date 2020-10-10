@@ -1,0 +1,5 @@
+
+RTO for a single AZ outage would be 15 min (knowing ze hqve q multi AZ solution)
+RTO for a single region outage would be 4 hours (standby resource )
+RPO for a single AZ outage would be 1 hour
+RPO for a single region outage would be 8 hours
