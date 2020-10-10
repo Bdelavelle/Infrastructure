@@ -1,0 +1,19 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+CloudFormation Template Scanner
+
+### Example vulnerability
+Using the Cloud Conformity API or UI, and the full Knowledge Base of checks, configuration errors and mistakes are detected and easily remediated from the very earliest phase of your CI/CD pipeline. Your templates can instantly be run through the API, during the coding process, or upon completion, for peace of mind that the code moves forward with full compliance, into your infrastructure.
+
+##Scan AMI’s or containers for OS vulnerabilities
+Amazon ECR
+
+### Example vulnerability
+Amazon ECR image scanning helps in identifying software vulnerabilities in your container images.mazon ECR uses the Common Vulnerabilities and Exposures (CVEs) database from the open source Clair project and provides you with a list of scan findings.
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+Intruder
+
+### Example vulnerability
+Finds security weaknesses in your digital infrastructure to avvoid data breaches

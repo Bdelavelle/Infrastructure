@@ -1,0 +1,24 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+securityhub-encrypted-volumes-45616584
+MFA not enabled
+securityhub-encrypted-volumes-45616584 2 Noncompliant resource(s)
+securityhub-ec2-imdsv2-check-6495bdf7 2 Noncompliant resource(s)
+securityhub-iam-password-policy-ensure-expires-fde95e48 1 Noncompliant resource(s)
+securityhub-ec2-ebs-encryption-by-default-9bacc42d 1 Noncompliant resource(s)
+securityhub-guardduty-enabled-centralized-d8e21797 1 Noncompliant resource(s)
+securityhub-alb-http-to-https-redirection-check-fddfb319 1 Noncompliant resource(s)
+securityhub-multi-region-cloud-trail-enabled-f9eac520 1 Noncompliant resource(s)
+securityhub-cloud-trail-encryption-enabled-4f0bf008 1 Noncompliant resource(s)
+securityhub-cloud-trail-cloud-watch-logs-enabled-9372626e 1 Noncompliant resource(s)
+ 
+On instance i-0de21b660b562e02b, TCP port 21 which is associated with 'FTP' is reachable from the internet
+On instance i-0de21b660b562e02b, TCP port 20 which is associated with 'FTP' is reachable from the internet
+On instance i-0de21b660b562e02b, UDP port 23 which is associated with 'Telnet' is reachable from the internet
+On instance i-0de21b660b562e02b, UDP port 20 which is associated with 'FTP' is reachable from the internet 
+On instance i-0de21b660b562e02b, UDP port 21 which is associated with 'FTP' is reachable from the internet
+On instance i-0de21b660b562e02b, TCP port 23 which is associated with 'Telnet' is reachable from the internet
+
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+Enable MFA authentication
+Change security group to ensure FTP / Telnet ports are closed - Use a rebound server for telnet
